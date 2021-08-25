@@ -35,19 +35,27 @@
             </thead>
             <tbody>
                 <!-- YOUR CODE -->
+                <?php foreach ($transactions as $transaction) : ?>
+                    <tr>
+                        <td><?= $transaction['Date'] ?></td>
+                        <td><?= $transaction['Check #'] ?></td>
+                        <td><?= $transaction['Description'] ?></td>
+                        <td><?= $transaction['Amount'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
             <tfoot>
                 <tr>
                     <th colspan="3">Total Income:</th>
-                    <td><!-- YOUR CODE --></td>
+                    <td>$<?= $totalEarnings ?></td>
                 </tr>
                 <tr>
                     <th colspan="3">Total Expense:</th>
-                    <td><!-- YOUR CODE --></td>
+                    <td>$<?= $totalExpenses ?></td>
                 </tr>
                 <tr>
                     <th colspan="3">Net Total:</th>
-                    <td><!-- YOUR CODE --></td>
+                    <td>$<?= $netTotal ?></td>
                 </tr>
             </tfoot>
         </table>
