@@ -37,7 +37,7 @@
                 <!-- YOUR CODE -->
                 <?php foreach ($transactions as $transaction) : ?>
                     <tr>
-                        <td><?= $transaction['Date'] ?></td>
+                        <td><?= formatDate($transaction['Date']) ?></td>
                         <td><?= $transaction['Check #'] ?></td>
                         <td><?= $transaction['Description'] ?></td>
                         <td><?= $transaction['Amount'] ?></td>

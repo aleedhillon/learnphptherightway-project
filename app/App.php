@@ -13,7 +13,7 @@ function readTransactions()
     $transactionFiles = scandir(TRANS_DIR);
 
     foreach ($transactionFiles as $file) {
-        if ($file === '.' || $file === '..') {
+        if (is_dir($file)) {
             continue;
         }
 
@@ -97,4 +97,8 @@ function dd(...$args)
 {
     var_dump(...$args);
     die;
+}
+
+function formatDate(string $date){
+    return date('F j, Y', strtotime($date));
 }
